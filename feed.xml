@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Appcanary</title>
+  <subtitle>Appcanary makes sure you never run vulnerable software on your servers.</subtitle>
+  <id>https://blog.appcanary.com</id>
+  <link href="https://blog.appcanary.com"/>
+  <link href="https://blog.appcanary.com/feed.xml" rel="self"/>
+  <updated>2017-03-12T20:00:00-04:00</updated>
+  <entry>
+    <title>Episode 1</title>
+    <link rel="alternate" href="https://blog.appcanary.com/2017/episode-one.html"/>
+    <id>https://blog.appcanary.com/2017/episode-one.html</id>
+    <published>2017-03-12T20:00:00-04:00</published>
+    <updated>2017-03-13T19:36:09-04:00</updated>
+    <author>
+      <name>Phillip Mendonça-Vieira</name>
+    </author>
+    <content type="html">This is a test of our podcast feed. Hooray!
+
+</content>
+  </entry>
+</feed>

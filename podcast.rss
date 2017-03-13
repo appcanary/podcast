@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>Appcanary Podcast</title>
+    <link>http://podcast.appcanary.com</link>
+    <link rel="self">http://podcast.appcanary.com/podcast.xml</link>
+    <language>en-us</language>
+    <itunes:author>Appcanary</itunes:author>
+    <itunes:subtitle>Appcanary makes sure you never run vulnerable software on your servers. This is their podcast.</itunes:subtitle>
+    <itunes:summary>Appcanary makes sure you never run vulnerable software on your servers. This is their podcast.</itunes:summary>
+    <description>Appcanary makes sure you never run vulnerable software on your servers. This is their podcast.</description>
+    <itunes:owner>
+      <itunes:name>Appcanary</itunes:name>
+      <itunes:email>hello@appcanary.com</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>yes</itunes:explicit>
+    <media:rating>adult</media:rating>
+    <media:thumbnail url="http://podcast.appcanary.com/images/canary-miner.full-size.png"/>
+    <itunes:image href="http://podcast.appcanary.com/images/canary-miner.full-size.png"/>
+
+      <itunes:category text="Society &amp; Culture"/>
+      <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Society &amp; Culture</media:category>
+      <itunes:category text="Technology"/>
+      <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Technology</media:category>
+
+    <contributor>
+      <name>Phillip Mendonça-Vieira</name>
+      <email>phillmv@appcanary.com</email>
+    </contributor>
+
+    <contributor>
+      <name>Max Veytsman</name>
+      <email>max@appcanary.com</email>
+    </contributor>
+
+      <item>
+        <guid>guid</guid>
+        <title>Episode 1</title>
+        <pubDate>Mon, 13 Mar 2017 00:00:00 GMT</pubDate>
+        <link>https://blog.appcanary.com/2017/episode-one.html</link>
+        <itunes:duration>31:25</itunes:duration>
+        <itunes:author>Appcanary</itunes:author>
+        <itunes:explicit>true</itunes:explicit>
+        <itunes:summary>This is a test of our podcast feed. Hooray!
+
+</itunes:summary>
+        <itunes:subtitle>This is a test of our podcast feed. Hooray!
+
+</itunes:subtitle>
+        <description>This is a test of our podcast feed. Hooray!
+
+</description>
+        <media:content url="https://blog.appcanary.com/mp3/appcanary-ep1.mp3" fileSize="45956925" type="audio/mpeg"/>
+        <enclosure url="https://blog.appcanary.com/mp3/appcanary-ep1.mp3" length="45956925" type="audio/mpeg"/>
+      </item>
+  </channel>
+</rss>
