@@ -40,15 +40,9 @@ activate :blog do |blog|
   blog.calendar_template = "calendar.html"
 
   # Enable pagination
-  # blog.paginate = true
-  # blog.per_page = 10
-  # blog.page_link = "page/{num}"
-  blog.custom_collections = { 
-    photography: {
-      link: "/photos/{photography}.html",
-      template: "/layout.erb"
-    }
-  }
+  blog.paginate = true
+  blog.per_page = 10
+  blog.page_link = "page/{num}"
 end
 
 page "/feed.xml", layout: false
@@ -65,6 +59,9 @@ end
 #   end
 # end
 
+set :markdown_engine, :redcarpet
+set :markdown, fenced_code_blocks: true, smartypants: true, footnotes: true, tables: true, with_toc_data: true
+
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
@@ -73,3 +70,43 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
+config[:authors] = {
+    "phillmv" => {
+      name: 'Phillip Mendonça-Vieira',
+      bio: nil, # Optional
+      location: nil, # Optional
+      website: nil, # Optional
+      gravatar_email: nil, # Optional
+      twitter: "phillmv" # Optional
+    },
+    "mveytsman" => {
+      name: "Max Veytsman",
+      bio: nil,
+      location: nil,
+      website: nil,
+      gravatar_email: nil,
+      twitter: "mveytsman"
+    },
+    "team" => {
+      name: "Team Appcanary",
+      bio: nil,
+      location: nil,
+      website: nil,
+      gravatar_email: nil,
+      twitter: nil
+    }
+}
+
+
+config[:domain] = "podcast.appcanary.com"
+
+ready do
+  config.authors.each do |k, author|
+    proxy "/author/#{author[:name].parameterize}.html",
+          '/author.html', ignore: true, :locals => { "page_type" => "author",
+                                                     "articles" => sitemap.resources.select { |r| r.data.author == k }.sort_by { |r| r.data.date}.reverse,
+                                                     :current_article => OpenStruct.new({:metadata => {:page => { :author => k }}}) }
+  end
+end
+

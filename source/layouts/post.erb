@@ -1,0 +1,15 @@
+<% wrap_layout :layout do %>
+  <section>
+    <div class="entry">
+      <div class="post">
+        <h1 class="title"><a href="<%= current_article.path %>"><%= current_article.title %></a></h1>
+        <div class="published-tags">By <span class="author"><%= link_to post_author(current_article).name, author_path(current_article) %></span> |
+          <span class="date"><%= current_article.date.strftime('%B, %d %Y') %></span> on <%= tags(current_article) %></div>
+
+        <%= yield %>
+        <p class="date"><%= link_to "# #{current_article.date.strftime("%Y-%m-%d")}", current_article.url %></span>
+      </div>
+    </div>
+  </section>
+<% end %>
+

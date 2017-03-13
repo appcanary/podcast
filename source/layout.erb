@@ -4,15 +4,27 @@
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag "all" %>
 
-    <title>Blog Title<%= ' - ' + current_article.title unless current_article.nil? %></title>
+    <title>Appcanary Podcast</title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
   <body>
 
-    <div id="main" role="main">
-      <%= yield %>
+    <div class="topbar"></div>
+    <div id="header">
+      <div class="preamble">
+        <img class="logo" src="/images/canary-miner.medium.png">
+        <p>
+          Appcanary makes sure you never run vulnerable software on your servers.<br/>
+          This is where we host our podcast. If you like it, check out our blog!
+        </p>
+      </div>
+      <div class="preamble">
+      </div>
     </div>
+
+    <%= yield %>
 
     <aside>
       <h2>Recent Articles</h2>
