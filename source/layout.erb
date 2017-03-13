@@ -5,11 +5,13 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag "all" %>
+    <%= favicon_tag 'images/favicon.ico' %>
 
     <title>Appcanary Podcast</title>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
   <body>
+    <%= partial "layouts/typekit" %>
 
     <div class="topbar"></div>
     <div id="header">
@@ -48,5 +50,8 @@
         <% end %>
       </ol>
     </aside>
+
+    <%= partial "layouts/analytics" %>
+    
   </body>
 </html>
