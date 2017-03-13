@@ -1,7 +1,8 @@
 ---
 pageable: true
-per_page: 2
+per_page: 5
 ---
+
 <% page_articles.each_with_index do |article, i| %>
   <section>
     <div class="entry">
@@ -19,19 +20,4 @@ per_page: 2
   </section>
 <% end %>
 
-<% if paginate %>
-  <section>
-    <div class="pagination">
-      <div class="paginators">
-        <% if prev_page %>
-          <%= link_to '← Newer Posts', prev_page, class: 'newer-posts'%>
-        <% end %>
-        <span class="page-number">Page <%= page_number %> of <%= num_pages %></span>
-
-        <% if next_page %>
-          <%= link_to 'Older Posts →', next_page, class: "older-posts" %>
-        <% end %>
-      </div>
-    </div>
-  </section>
-<% end %>
+<%= partial "shared/pagination" %>
