@@ -37,7 +37,7 @@
         <guid>guid</guid>
         <title>Episode 1</title>
         <pubDate>Mon, 13 Mar 2017 00:00:00 GMT</pubDate>
-        <link>https://blog.appcanary.com/2017/episode-one.html</link>
+        <link>https://podcast.appcanary.com/2017/episode-one.html</link>
         <itunes:duration>31:25</itunes:duration>
         <itunes:author>Appcanary</itunes:author>
         <itunes:explicit>true</itunes:explicit>
@@ -50,8 +50,8 @@
         <description>This is a test of our podcast feed. Hooray!
 
 </description>
-        <media:content url="https://blog.appcanary.com/mp3/appcanary-ep1.mp3" fileSize="45956925" type="audio/mpeg"/>
-        <enclosure url="https://blog.appcanary.com/mp3/appcanary-ep1.mp3" length="45956925" type="audio/mpeg"/>
+        <media:content url="https://podcast.appcanary.com/mp3/appcanary-ep1.mp3" fileSize="45956925" type="audio/mpeg"/>
+        <enclosure url="https://podcast.appcanary.com/mp3/appcanary-ep1.mp3" length="45956925" type="audio/mpeg"/>
       </item>
   </channel>
 </rss>
