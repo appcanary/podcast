@@ -6,6 +6,8 @@
 @import "neat";
 @import "global_tweaks";
 
+// fix for making gist play nice
+// with bitters/neat
 .gist table {
 	table-layout: auto;
 	margin: 0;
