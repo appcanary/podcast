@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>Appcanary Podcast</title>
+    <link>http://podcast.appcanary.com</link>
+    <link rel="self">http://podcast.appcanary.com/podcast.xml</link>
+    <language>en-us</language>
+    <itunes:author>Appcanary</itunes:author>
+    <itunes:subtitle>Appcanary makes sure you never run vulnerable software on your servers. This is their podcast.</itunes:subtitle>
+    <itunes:summary>Appcanary makes sure you never run vulnerable software on your servers. This is their podcast.</itunes:summary>
+    <description>Appcanary makes sure you never run vulnerable software on your servers. This is their podcast.</description>
+    <itunes:owner>
+      <itunes:name>Appcanary</itunes:name>
+      <itunes:email>hello@appcanary.com</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>yes</itunes:explicit>
+    <media:rating>adult</media:rating>
+    <media:thumbnail url="http://podcast.appcanary.com/images/canary-miner.full-size.png"/>
+    <itunes:image href="http://podcast.appcanary.com/images/canary-miner.full-size.png"/>
+
+    <% ['Society & Culture', 'Technology'].each do |cat| %>
+      <itunes:category text="<%=h cat%>"/>
+      <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd"><%=h cat%></media:category>
+    <% end %>
+
+    <contributor>
+      <name>Phillip Mendonça-Vieira</name>
+      <email>phillmv@appcanary.com</email>
+    </contributor>
+
+    <contributor>
+      <name>Max Veytsman</name>
+      <email>max@appcanary.com</email>
+    </contributor>
+
+    <% blog.articles.select { |art| art.data.podcast }.each do |ep| %>
+      <item>
+        <guid><%= guid(ep) %></guid>
+        <title><%=h ep.title%></title>
+        <pubDate><%= format_date(ep.date) %></pubDate>
+        <link><%= article_url(ep) %></link>
+        <itunes:duration><%= ep.data.duration %></itunes:duration>
+        <itunes:author>Appcanary</itunes:author>
+        <itunes:explicit><%= ep.data.explicit %></itunes:explicit>
+        <itunes:summary><%=h ep.body %></itunes:summary>
+        <itunes:subtitle><%=h ep.body%></itunes:subtitle>
+        <description><%=h ep.body %></description>
+        <% if false %>
+        <itunes:image href="<%= podcast_image_path(talk.image_url) %>"/>
+        <% end %>
+        <media:content url="<%= podcast_path(ep) %>" fileSize="<%= podcast_file_size(ep) %>" type="audio/mpeg"/>
+        <enclosure url="<%= podcast_path(ep) %>" length="<%= podcast_file_size(ep) %>" type="audio/mpeg"/>
+      </item>
+    <% end %>
+  </channel>
+</rss>

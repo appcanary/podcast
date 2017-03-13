@@ -20,5 +20,24 @@ module AppHelpers
     "/author/#{post_author(article).name.parameterize}.html"
   end
 
+  def article_url(article)
+    URI.join(config.site_url, article.url)
+  end
+
+  def podcast_path(article)
+    URI.join(config.site_url, "mp3/#{article.data.filename}")
+  end
+
+  def podcast_file_size(ep)
+    File.size("source/mp3/#{ep.data.filename}")
+  end
+
+  def guid(article)
+    "guid"
+  end
+
+  def format_date(date)
+    date.strftime('%a, %d %b %Y %H:%M:%S GMT')
+  end
 
 end
