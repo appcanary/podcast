@@ -52,6 +52,8 @@ configure :development do
   activate :livereload
 end
 
+set :site_url, "https://blog.appcanary.com"
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
