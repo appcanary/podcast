@@ -5,7 +5,10 @@
         <% if prev_page %>
           <%= link_to '← Newer Posts', prev_page, class: 'newer-posts'%>
         <% end %>
-        <span class="page-number">Page <%= page_number %> of <%= num_pages %></span>
+
+        <% if prev_page || next_page %>
+          <span class="page-number">Page <%= page_number %> of <%= num_pages %></span>
+        <% end %>
 
         <% if next_page %>
           <%= link_to 'Older Posts →', next_page, class: "older-posts" %>

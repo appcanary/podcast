@@ -33,7 +33,7 @@ module AppHelpers
   end
 
   def guid(article)
-    "guid"
+    Digest::SHA256.hexdigest(File.open("source/mp3/#{article.data.filename}").read)
   end
 
   def format_date(date)
