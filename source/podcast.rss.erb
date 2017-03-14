@@ -45,9 +45,7 @@
         <itunes:summary><%=h ep.body %></itunes:summary>
         <itunes:subtitle><%=h ep.body%></itunes:subtitle>
         <description><%=h ep.body %></description>
-        <% if false %>
-        <itunes:image href="<%= podcast_image_path(talk.image_url) %>"/>
-        <% end %>
+        <itunes:image href="https://podcast.appcanary.com/images/appcanary-podcast.jpg"/>
         <media:content url="<%= podcast_path(ep) %>" fileSize="<%= podcast_file_size(ep) %>" type="audio/mpeg"/>
         <enclosure url="<%= podcast_path(ep) %>" length="<%= podcast_file_size(ep) %>" type="audio/mpeg"/>
       </item>
