@@ -12,6 +12,11 @@ explicit: true
 
 In our inaugural episode, Max and Phill discuss MongoDB ransomware, and the opacity of algorithms.
 
+<audio controls preload="metadata" style=" width:300px;">
+	<source src="/mp3/appcanary-ep1.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+</audio>
+
 ###Show Notes
 * [Improve Your Security: Port Scan Yourself](https://blog.appcanary.com/2017/improve-security-port-scan-yourself.html)
 
