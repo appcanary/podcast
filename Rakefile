@@ -6,7 +6,8 @@ file GH_PAGES_REF do
   cd PROJECT_ROOT do
     sh "rm -rf #{BUILD_DIR}"
 
-    sh "git clone -b gh-pages git@github.com:appcanary/podcast.git build"
+    sh "mkdir #{BUILD_DIR}"
+    # sh "git clone -b gh-pages git@github.com:appcanary/podcast.git build"
   end
 end
 
@@ -25,18 +26,19 @@ end
 
 task :deploy => [:not_dirty, :build] do
   cd PROJECT_ROOT do
-    head = `git log --pretty="%h" -n1`.strip
-    message = ["Site updated to #{head}"].compact.join("\n\n")
+    # head = `git log --pretty="%h" -n1`.strip
+    # message = ["Site updated to #{head}"].compact.join("\n\n")
 
-    cd BUILD_DIR do
-      sh 'git add --all'
-      if /nothing to commit/ =~ `git status`
-        puts "No changes to commit."
-      else
-        sh "git commit -m \"#{message}\""
-      end
-      sh "git push -f origin gh-pages"
-    end
+    sh "s3cmd -c s3cfg sync --recursive --delete-removed --guess-mime-type --no-mime-magic --no-progress build/* s3://podcast.appcanary.com"
+    # cd BUILD_DIR do
+    #   sh 'git add --all'
+    #   if /nothing to commit/ =~ `git status`
+    #     puts "No changes to commit."
+    #   else
+    #     sh "git commit -m \"#{message}\""
+    #   end
+    #   sh "git push -f origin gh-pages"
+    # end
   end
 end
 
