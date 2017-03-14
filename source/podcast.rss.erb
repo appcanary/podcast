@@ -42,8 +42,8 @@
         <itunes:duration><%= ep.data.duration %></itunes:duration>
         <itunes:author>Appcanary</itunes:author>
         <itunes:explicit><%= ep.data.explicit %></itunes:explicit>
-        <itunes:summary><%=h ep.data.description %></itunes:summary>
-        <itunes:subtitle><%=h ep.body%></itunes:subtitle>
+        <itunes:summary><%=h ep.body%></itunes:summary>
+        <itunes:subtitle><%=h ep.data.description %></itunes:subtitle>
         <description><%=h ep.body %></description>
         <itunes:image href="https://podcast.appcanary.com/images/appcanary-podcast.jpg"/>
         <media:content url="<%= podcast_path(ep) %>" fileSize="<%= podcast_file_size(ep) %>" type="audio/mpeg"/>
