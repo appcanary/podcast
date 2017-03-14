@@ -3,7 +3,6 @@ title: Episode 1 - MongoDB, Ransomware and Algorithms
 author: phillmv
 date: 2017-03-13
 layout: post
-tags: example
 podcast: true
 filename: appcanary-ep1.mp3
 duration: "31:25"
