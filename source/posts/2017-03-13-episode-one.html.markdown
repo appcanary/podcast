@@ -7,9 +7,11 @@ podcast: true
 filename: appcanary-ep1.mp3
 duration: "31:25"
 explicit: true
+description: In our inaugural episode, Max and Phill discuss MongoDB ransomware, and the opacity of algorithms. Produced by Katie Jensen.
+
 ---
 
-In our inaugural episode, Max and Phill discuss MongoDB ransomware, and the opacity of algorithms.
+In our inaugural episode, Max and Phill discuss MongoDB ransomware, and the opacity of algorithms. Produced by [Katie Jensen](https://twitter.com/katiejensen).
 
 <audio controls preload="metadata" style=" width:300px;">
 	<source src="/mp3/appcanary-ep1.mp3" type="audio/mpeg">
