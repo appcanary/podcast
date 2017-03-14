@@ -52,7 +52,7 @@ configure :development do
   activate :livereload
 end
 
-set :site_url, "https://podcast.appcanary.com"
+set :site_url, "http://podcast.appcanary.com"
 
 # Methods defined in the helpers block are available in templates
 # helpers do
