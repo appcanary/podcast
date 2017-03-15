@@ -27,7 +27,7 @@ activate :blog do |blog|
   blog.permalink = "{year}/{title}.html"
   # Matcher for blog source files
   blog.sources = "posts/{year}-{month}-{day}-{title}.html"
-  # blog.taglink = "tags/{tag}.html"
+  blog.taglink = "tags/{tag}.html"
   # blog.layout = "layout"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
@@ -44,8 +44,6 @@ activate :blog do |blog|
   blog.per_page = 10
   blog.page_link = "page/{num}"
 end
-
-page "/feed.xml", layout: false
 
 # Reload the browser automatically whenever files change
 configure :development do
