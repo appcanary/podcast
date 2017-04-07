@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 @import "normalize.css";
 @import "bourbon";
 @import "bitters/base";   /* Bitters needs to be imported before Neat */
@@ -82,6 +81,25 @@ section {
     color: black;
   }
 
+  ul {
+    padding-left: 3rem;
+  }
+
+  ol ol, ul ul,
+  ul ol, ol ul {
+    margin: 0 0 0.4em 0;
+    padding-left: 2em;
+  }
+
+  li {
+    margin: 0.4em 0;
+  }
+
+  li li {
+    margin: 0;
+  }
+
+
   ol {
     list-style-type: decimal;
     // style-pos inside so it'll line up
@@ -101,12 +119,29 @@ section {
       margin: 0 0 $medium-spacing;
     }
   }
-  
+
+  ul {
+    list-style-type: disc;
+    ul {
+      list-style-type: circle;
+    }
+  }
+
+  code {
+    white-space: pre-wrap;
+  }
+
   pre code {
+    padding: 0;
     color: inherit;
     border: none;
     white-space: inherit;
-    font-size: 1em;
+    background-color: inherit;
+    font-size: 1.2em;
+  }
+  
+  blockquote {
+    font-style: italic;
   }
 }
 
@@ -118,8 +153,8 @@ section {
 
 .footnotes {
   width: 100%;
-  border-top: $base-border;
-  padding-top: $base-spacing;
+  // border-top: $base-border;
+  // padding-top: $base-spacing;
   margin-top: $base-spacing;
   font-size: 0.9em;
 }
