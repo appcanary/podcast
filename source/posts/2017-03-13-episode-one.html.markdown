@@ -13,7 +13,7 @@ description: In our inaugural episode, Max and Phill discuss MongoDB ransomware,
 
 In our inaugural episode, Max and Phill discuss MongoDB ransomware, and the opacity of algorithms. Produced by [Katie Jensen](https://twitter.com/katiejensen).
 
-<audio controls preload="metadata" style="100%">
+<audio controls preload="metadata" style="width: 100%">
 	<source src="/mp3/appcanary-ep1.mp3" type="audio/mpeg">
 	Your browser does not support the audio element.
 </audio>
