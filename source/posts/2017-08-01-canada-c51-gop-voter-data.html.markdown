@@ -1,13 +1,12 @@
 ---
 title: Episode 5 - Spies and Voter Data
 author: phillmv
-date: 2017-07-24
+date: 2017-08-01
 layout: post
 podcast: true
 filename: appcanary-ep5.mp3
 duration: "37:52"
 explicit: true
-published: false
 description: Phill and Max discuss new spying powers in Canada, and the leak of GOP voter data
 
 ---
