@@ -1,13 +1,12 @@
 ---
 title: Episode 6 - Clojure, Ruby, Joy and Developer Happiness
 author: phillmv
-date: 2017-08-02
+date: 2017-09-18
 layout: post
 podcast: true
 filename: appcanary-ep6.mp3
 duration: "35:12"
 explicit: true
-published: false
 description: Max and Phill revisit leaving Clojure, and what joy and developer happiness actually means.
 ---
 
