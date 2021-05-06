@@ -13,7 +13,7 @@ description: Phill and Max discuss new spying powers in Canada, and the leak of 
 
 Phill and Max discuss new spying powers in Canada, and the leak of GOP voter data. Produced by [Katie Jensen](https://twitter.com/katiejensen).
 
-<audio controls preload="metadata" style="width: 100%;">
+<audio controls preload="none" style="width: 100%;">
 	<source src="/mp3/appcanary-ep5.mp3" type="audio/mpeg">
 	Your browser does not support the audio element.
 </audio>

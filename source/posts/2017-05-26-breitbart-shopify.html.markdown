@@ -13,7 +13,7 @@ description: Wherein Max reveals himself to be a coward and Phill reveals himsel
 
 Max and Phill discuss, over breakfast, what Shopify should or should not do with regard to Breitbart. Produced by [Katie Jensen](https://twitter.com/katiejensen).
 
-<audio controls preload="metadata" style="width: 100%;">
+<audio controls preload="none" style="width: 100%;">
 	<source src="/mp3/appcanary-ep3.mp3" type="audio/mpeg">
 	Your browser does not support the audio element.
 </audio>
